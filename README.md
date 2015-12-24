@@ -1,4 +1,4 @@
-= Interactor
+# Interactor
 
 ### Usage
 
