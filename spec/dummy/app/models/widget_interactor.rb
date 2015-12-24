@@ -1,4 +1,4 @@
-class WidgetInteractor < BaseInteractor
+class WidgetInteractor < Interactor::Base
   def process(success)
     broadcast(success)
   end
