@@ -4,7 +4,7 @@
 
 Define an interactor
 
-```
+```ruby
 class WidgetCreator
   def process(params)
     widget = Widget.new(params)
@@ -19,7 +19,7 @@ Pass some listeners to the interactor. Listeners just need to respond to message
 * :widget_creator_success
 * :widget_creator_failure
 
-```
+```ruby
 class WidgetController
   def create
     WidgetCreator.new(self, FeedWriter.new, Mailer.new).process(widget_params)
