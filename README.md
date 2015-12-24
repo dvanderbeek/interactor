@@ -2,7 +2,7 @@
 
 ### Usage
 
-Define an interactor
+Define an interactor by calling `acts_as_interactor` and defining the method `process`. Use the `broadcast` method to tell the interactor's listeners what happened, along with any arguments.
 
 ```ruby
 class WidgetCreator
@@ -17,9 +17,7 @@ class WidgetCreator
 end
 ```
 
-Pass some listeners to the interactor. Listeners just need to respond success and failure messages if they are interested
-* :widget_creator_success
-* :widget_creator_failure
+Pass some listeners to the interactor. Listeners just need to respond success and failure messages if they are interested. In this case, `:widget_creator_success` and `:widget_creator_failure`
 
 ```ruby
 class WidgetController
