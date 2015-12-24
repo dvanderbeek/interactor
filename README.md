@@ -5,7 +5,7 @@
 Define an interactor
 
 ```ruby
-class WidgetCreator
+class WidgetCreator < Interactor::Base
   def process(params)
     widget = Widget.new(params)
     success = widget.save
@@ -15,7 +15,7 @@ class WidgetCreator
 end
 ```
 
-Pass some listeners to the interactor. Listeners just need to respond to messages they are interested in
+Pass some listeners to the interactor. Listeners just need to respond success and failure messages if they are interested
 * :widget_creator_success
 * :widget_creator_failure
 
