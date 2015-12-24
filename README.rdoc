@@ -3,6 +3,7 @@
 ### Usage
 
 Define an interactor
+
 ```
 class WidgetCreator
   def process(params)
@@ -17,6 +18,7 @@ end
 Pass some listeners to the interactor. Listeners just need to respond to messages they are interested in
 * :widget_creator_success
 * :widget_creator_failure
+
 ```
 class WidgetController
   def create
