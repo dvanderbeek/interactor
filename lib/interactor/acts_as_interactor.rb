@@ -15,6 +15,7 @@ module Interactor
     module LocalInstanceMethods
       def initialize(*listeners)
         @listeners = listeners
+        raise NotImplementedError unless self.respond_to? :process
       end
 
       def broadcast(success, *args)

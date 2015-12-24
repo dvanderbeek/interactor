@@ -10,6 +10,10 @@ class WidgetCreator
   end
 end
 
+class InvalidInteractor
+  acts_as_interactor
+end
+
 RSpec.describe Interactor::ActsAsInteractor do
   let(:listener) { Listener.new }
   let(:interactor) { WidgetCreator.new(listener) }
@@ -39,5 +43,9 @@ RSpec.describe Interactor::ActsAsInteractor do
       expect(listener).to receive(:widget_creator_failure)
       interactor.process(false)
     end
+  end
+
+  it "raises an error if process is not defined" do
+    expect{ InvalidInteractor.new() }.to raise_error NotImplementedError
   end
 end
