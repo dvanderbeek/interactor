@@ -5,7 +5,9 @@
 Define an interactor
 
 ```ruby
-class WidgetCreator < Interactor::Base
+class WidgetCreator
+  acts_as_interactor
+
   def process(params)
     widget = Widget.new(params)
     success = widget.save
