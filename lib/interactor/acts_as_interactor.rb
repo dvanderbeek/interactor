@@ -29,3 +29,5 @@ module Interactor
     end
   end
 end
+
+Object.send :include, Interactor::ActsAsInteractor

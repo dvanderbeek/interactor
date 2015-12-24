@@ -1,9 +1,10 @@
 require 'spec_helper'
 
-class Listener
-end
+class Listener; end;
 
-class WidgetCreator < Interactor::Base
+class WidgetCreator
+  acts_as_interactor
+
   def process(success)
     broadcast(success)
   end
