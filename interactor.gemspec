@@ -12,27 +12,33 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.authors = ["David Van Der Beek"]
   s.date = "2015-12-29"
-  s.description = "TODO: longer description of your gem"
+  s.description = "A simple module to turn classes into interactors that send messages to listeners"
   s.email = "earlynovrock@gmail.com"
-  # s.executables = ["rails"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
   ]
   s.files = [
+    ".DS_Store",
     "Gemfile",
     "Gemfile.lock",
+    "LICENSE.txt",
+    "README.rdoc",
     "Rakefile",
     "VERSION",
     "interactor.gemspec",
     "lib/interactor.rb",
     "lib/interactor/acts_as_interactor.rb",
-    "spec/spec_helper.rb"
+    "spec/acts_as_interactor_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/support/invalid_interactor.rb",
+    "spec/support/listener.rb",
+    "spec/support/widget_creator.rb"
   ]
   s.homepage = "http://github.com/dvanderbeek/interactor"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.5.0"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "A simple module to turn classes into interactors that send messages to listeners"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

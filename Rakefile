@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "interactor"
   gem.homepage = "http://github.com/dvanderbeek/interactor"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A simple module to turn classes into interactors that send messages to listeners}
+  gem.description = %Q{A simple module to turn classes into interactors that send messages to listeners}
   gem.email = "earlynovrock@gmail.com"
   gem.authors = ["David Van Der Beek"]
   # dependencies defined in Gemfile
