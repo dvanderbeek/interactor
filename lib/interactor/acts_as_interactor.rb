@@ -1,8 +1,7 @@
 module Interactor
   module ActsAsInteractor
-    extend ActiveSupport::Concern
-
-    included do
+    def self.included(base)
+      base.extend(ClassMethods)
     end
 
     module ClassMethods

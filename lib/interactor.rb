@@ -1,5 +1,2 @@
-require "interactor/engine"
+require "active_support/inflector"
 require "interactor/acts_as_interactor"
-
-module Interactor
-end

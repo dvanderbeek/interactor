@@ -1,21 +1,7 @@
 require 'spec_helper'
 
-class Listener; end;
-
-class WidgetCreator
-  acts_as_interactor
-
-  def process(success)
-    broadcast(success)
-  end
-end
-
-class InvalidInteractor
-  acts_as_interactor
-end
-
 RSpec.describe Interactor::ActsAsInteractor do
-  let(:listener) { Listener.new }
+  let(:listener)   { Listener.new }
   let(:interactor) { WidgetCreator.new(listener) }
 
   it "instantiates with listeners" do
