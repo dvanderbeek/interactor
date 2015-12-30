@@ -1,7 +1,7 @@
 module Interactor
   module ActsAsInteractor
     def self.included(base)
-      base.extend(ClassMethods)
+      base.extend(Interactor::ActsAsInteractor::ClassMethods)
     end
 
     module ClassMethods
@@ -21,6 +21,7 @@ module Interactor
         listeners.each do |listener|
           listener.send(message(success), *args) if listener.respond_to? message(success)
         end
+        return success
       end
 
       def message(success)
