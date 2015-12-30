@@ -29,6 +29,14 @@ RSpec.describe Interactor::ActsAsInteractor do
       expect(listener).to receive(:widget_creator_failure)
       interactor.process(false)
     end
+
+    it "returns true when success == true" do
+      expect(interactor.process(true)).to be true
+    end
+
+    it "returns false when success == false" do
+      expect(interactor.process(false)).to be false
+    end
   end
 
   it "raises an error if process is not defined" do
