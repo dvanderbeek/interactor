@@ -11,20 +11,14 @@ RSpec.describe Interactor::ActsAsInteractor do
   describe ".broadcast" do
     it "calls the correct message when process is successful" do
       expect(listener).to receive(:widget_creator_success)
-      interactor.process(true)
+      result = interactor.process(true)
+      expect(result).to be true
     end
 
     it "calls the correct message when process is unsuccessful" do
       expect(listener).to receive(:widget_creator_failure)
-      interactor.process(false)
-    end
-
-    it "returns true when success == true" do
-      expect(interactor.process(true)).to be true
-    end
-
-    it "returns false when success == false" do
-      expect(interactor.process(false)).to be false
+      result = interactor.process(false)
+      expect(result).to be false
     end
   end
 
