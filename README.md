@@ -11,8 +11,7 @@ class WidgetCreator
   def process(params)
     widget = Widget.new(params)
     success = widget.save
-    broadcast(success, widget)
-    return success
+    broadcast(success, widget) # broadcast returns the value of the success param, so process will return that value as well
   end
 end
 ```
