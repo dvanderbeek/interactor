@@ -24,6 +24,7 @@ module Interactor
         return success
       end
 
+    private
       def message(success)
         "#{self.class.name.underscore}_#{success ? 'success' : 'failure'}".to_sym
       end
